@@ -1,1 +1,3 @@
-PHP exercises (str function, if, for, while, foreach, DateTime, round, etc...)
+Exercices PHP
+
+30 exos au total
