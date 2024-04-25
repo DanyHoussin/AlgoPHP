@@ -23,15 +23,15 @@ function formulaire() {
         echo '<input type="text"></input><br>';
     }
     
-    $formation = array("Monsieur","Madame","Mademoiselle");
+    $job = array("Développeur Logiciel", "Designer web", "Intégrateur", "Chef de projet");
+
     echo '<form action="">
             <label for="formation"></label>
-            <select name="formation" id="formation">
-                <option value="Développeur Logiciel">Développeur Logiciel</option>
-                <option value="Designer web">Designer web</option>
-                <option value="Intégrateur">Intégrateur</option>
-                <option value="Chef de projet">Chef de projet</option>
-            </select>
+            <select name="formation" id="formation">';
+                foreach($job as $liste) {
+                    echo '<option value="'.$liste .'">'.$liste .'</option>';
+                }
+            '</select>
         </form>';
 }
 

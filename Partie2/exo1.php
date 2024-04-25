@@ -18,15 +18,17 @@ Vous devrez appeler la fonction comme suit : convertirMajRouge($texte) ;<br>
 
 <?php
 
-$texte = "MON TEXTE EN PARAMETRE";
+$texte = "Mon texte en parametre";
 
 function convertirMajRouge($texte) {
+    $texteMaj = strtoupper($texte);
+
     // Transformmer le texte en rouge
     // Méthode 1 :
-    $EnRouge = '<span style="color: red;">'. $texte .'</span>';
+    $EnRouge = '<span style="color: red;">'. $texteMaj .'</span>';
 
     // Méthode 2 :
-    $EnRouge = "<p class='red'>$texte</p>";
+    $EnRouge = "<p class='red'>$texteMaj</p>";
 
     return $EnRouge;
 }

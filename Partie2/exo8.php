@@ -11,3 +11,13 @@ repeterImage($url,4)
 <h2>Résultat</h2>
 
 <?php
+
+$url = "https://my.mobirise.com/data/userpic/764.jpg";
+
+function repeterImage($url,$nb){
+    for ($x = 1; $x <= $nb; $x++) { 
+        echo '<img src="'.$url.'">';
+    }    
+} 
+
+repeterImage($url,6);

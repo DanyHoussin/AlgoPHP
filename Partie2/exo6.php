@@ -20,11 +20,11 @@ function alimenterListeDeroulante($elements){
     // Liste déroulante en HTML
     echo '<form action="">
             <label for="elements"></label>
-            <select name="elements" id="elements">
-                <option value="Monsieur">Monsieur</option>
-                <option value="Madame">Madame</option>
-                <option value="Mademoiselle">Mademoiselle</option>
-            </select>
+            <select name="elements" id="elements">';
+            foreach($elements as $genre) {
+                echo '<option value="'.$genre .'">'.$genre .'</option>';
+            }
+            '</select>
         </form>';
 }
 

@@ -17,13 +17,11 @@ $nomsRadio = array("Masculin","Féminin","Autre");
 function afficherRadio($nomsRadio){
 
     // Liste radio en HTML
-    echo '<form action="/action_page.php">
-            <input type="radio" id="masculin" name="genre" value="masculin">
-            <label for="masculin">Masculin</label><br>
-            <input type="radio" id="féminin" name="genre" value="féminin">
-            <label for="féminin">Féminin</label><br>
-            <input type="radio" id="autre" name="genre" value="autre">
-            <label for="autre">Autre</label><br><br>
-    </form>';
+    echo '<form action="/action_page.php">';
+            foreach($nomsRadio as $genre) {
+                echo '<input type="radio" id="'.$genre.'" name="genre" value="'.$genre.'">';
+                echo '<label for="'.$genre.'">'.$genre.'</label><br>';
+            }
+        '</form>';
 }
 afficherRadio($nomsRadio);
